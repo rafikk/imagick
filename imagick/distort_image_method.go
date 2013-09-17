@@ -26,8 +26,6 @@ const (
 	DISTORTION_ARC                    DistortImageMethod = C.ArcDistortion
 	DISTORTION_POLAR                  DistortImageMethod = C.PolarDistortion
 	DISTORTION_DE_POLAR               DistortImageMethod = C.DePolarDistortion
-	DISTORTION_CYLINDER_2_PLANE       DistortImageMethod = C.Cylinder2PlaneDistortion
-	DISTORTION_PLANE_2_CYLINDER       DistortImageMethod = C.Plane2CylinderDistortion
 	DISTORTION_BARREL                 DistortImageMethod = C.BarrelDistortion
 	DISTORTION_BARREL_INVERSE         DistortImageMethod = C.BarrelInverseDistortion
 	DISTORTION_SHEPARDS               DistortImageMethod = C.ShepardsDistortion

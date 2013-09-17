@@ -449,34 +449,6 @@ func (mw *MagickWand) CompositeImageChannel(channel ChannelType, source *MagickW
 	return mw.GetLastError()
 }
 
-// Composite the images in the source wand over the images in the destination
-// wand in sequence, starting with the current image in both lists. Each layer
-// from the two image lists are composted together until the end of one of the
-// image lists is reached. The offset of each composition is also adjusted to
-// match the virtual canvas offsets of each layer. As such the given offset is
-// relative to the virtual canvas, and not the actual image.
-// Composition uses given x and y offsets, as the 'origin' location of the
-// source images virtual canvas (not the real image) allowing you to compose a
-// list of 'layer images' into the destination images. This makes it well
-// suitable for directly composing 'Clears Frame Animations' or 'Coaleased
-// Animations' onto a static or other 'Coaleased Animation' destination image
-// list. GIF disposal handling is not looked at. Special case: If one of the
-// image sequences is the last image (just a single image remaining), that
-// image is repeatally composed with all the images in the other image list.
-// Either the source or destination lists may be the single image, for this
-// situation. In the case of a single destination image (or last image given),
-// that image will ve cloned to match the number of images remaining in the
-// source image list. This is equivelent to the "-layer Composite" Shell API
-// operator.
-// source: the wand holding the source images
-//
-// compose, x, y: composition arguments
-//
-func (mw *MagickWand) CompositeLayers(source *MagickWand, compose CompositeOperator, x, y int) error {
-	C.MagickCompositeLayers(mw.mw, source.mw, C.CompositeOperator(compose), C.ssize_t(x), C.ssize_t(y))
-	return mw.GetLastError()
-}
-
 // Enhances the intensity differences between the lighter and darker elements
 // of the image. Set sharpen to a value other than 0 to increase the image
 // contrast otherwise the contrast is reduced.
@@ -1148,11 +1120,6 @@ func (mw *MagickWand) GetImageDistortion(reference *MagickWand, metric MetricTyp
 // Gets the image disposal method.
 func (mw *MagickWand) GetImageDispose() DisposeType {
 	return DisposeType(C.MagickGetImageDispose(mw.mw))
-}
-
-// Gets the image endian.
-func (mw *MagickWand) GetImageEndian() EndianType {
-	return EndianType(C.MagickGetImageEndian(mw.mw))
 }
 
 // Returns the filename of a particular image in a sequence.
@@ -2313,12 +2280,6 @@ func (mw *MagickWand) SetImageDepth(depth uint) error {
 // Sets the image disposal method.
 func (mw *MagickWand) SetImageDispose(dispose DisposeType) error {
 	C.MagickSetImageDispose(mw.mw, C.DisposeType(dispose))
-	return mw.GetLastError()
-}
-
-// Sets the image endian method.
-func (mw *MagickWand) SetImageEndian(endian EndianType) error {
-	C.MagickSetImageEndian(mw.mw, C.EndianType(endian))
 	return mw.GetLastError()
 }
 

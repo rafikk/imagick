@@ -22,9 +22,4 @@ const (
 	INTERPOLATE_PIXEL_MESH             InterpolatePixelMethod = C.MeshInterpolatePixel            // Triangular mesh interpolation
 	INTERPOLATE_PIXEL_NEAREST_NEIGHBOR InterpolatePixelMethod = C.NearestNeighborInterpolatePixel // Nearest neighbour only
 	INTERPOLATE_PIXEL_SPLINE           InterpolatePixelMethod = C.SplineInterpolatePixel          // Cubic Spline (blurred) interpolation
-	INTERPOLATE_PIXEL_AVERAGE9         InterpolatePixelMethod = C.Average9InterpolatePixel        // Average 9 nearest neighbours
-	INTERPOLATE_PIXEL_AVERAGE16        InterpolatePixelMethod = C.Average16InterpolatePixel       // Average 16 nearest neighbours
-	INTERPOLATE_PIXEL_BLEND            InterpolatePixelMethod = C.BlendInterpolatePixel           // blend of nearest 1, 2 or 4 pixels
-	INTERPOLATE_PIXEL_BACKGROUND       InterpolatePixelMethod = C.BackgroundInterpolatePixel      // just return background color
-	INTERPOLATE_PIXEL_CATROM           InterpolatePixelMethod = C.CatromInterpolatePixel          // Catmull-Rom interpolation
 )

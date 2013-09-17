@@ -44,5 +44,4 @@ const (
 	EVAL_OP_ABS                  EvaluateOperator = C.AbsEvaluateOperator
 	EVAL_OP_EXPONENTIAL          EvaluateOperator = C.ExponentialEvaluateOperator
 	EVAL_OP_MEDIAN               EvaluateOperator = C.MedianEvaluateOperator
-	EVAL_OP_SUM                  EvaluateOperator = C.SumEvaluateOperator
 )

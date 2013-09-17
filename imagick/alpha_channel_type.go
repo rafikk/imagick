@@ -24,6 +24,4 @@ const (
 	ALPHA_CHANNEL_SET         AlphaChannelType = C.SetAlphaChannel
 	ALPHA_CHANNEL_SHAPE       AlphaChannelType = C.ShapeAlphaChannel
 	ALPHA_CHANNEL_TRANSPARENT AlphaChannelType = C.TransparentAlphaChannel
-	ALPHA_CHANNEL_FLATTEN     AlphaChannelType = C.FlattenAlphaChannel
-	ALPHA_CHANNEL_REMOVE      AlphaChannelType = C.RemoveAlphaChannel
 )

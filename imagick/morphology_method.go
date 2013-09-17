@@ -35,5 +35,4 @@ const (
 	MORPHOLOGY_THINNING           MorphologyMethod = C.ThinningMorphology          /* Remove matching pixels from image */
 	MORPHOLOGY_THICKEN            MorphologyMethod = C.ThickenMorphology           /* Add matching pixels from image */
 	MORPHOLOGY_VORONOI            MorphologyMethod = C.VoronoiMorphology           /* distance matte channel copy nearest color */
-	MORPHOLOGY_ITERATIVE_DISTANCE MorphologyMethod = C.IterativeDistanceMorphology /* Add Kernel Value, take Minimum */
 )
