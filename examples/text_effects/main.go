@@ -1,7 +1,7 @@
 // Port of http://members.shaw.ca/el.supremo/MagickWand/text_effects.htm to Go
 package main
 
-import "github.com/gographics/imagick/imagick"
+import "github.com/rafikk/imagick/imagick"
 
 // Given a pattern name (which MUST have a leading #) and a pattern file,
 // set up a pattern URL for later reference in the specified drawing wand

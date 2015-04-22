@@ -2,7 +2,7 @@
 package main
 
 import (
-	"github.com/gographics/imagick/imagick"
+	"github.com/rafikk/imagick/imagick"
 	"os"
 )
 

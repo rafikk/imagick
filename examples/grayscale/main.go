@@ -3,7 +3,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/gographics/imagick/imagick"
+	"github.com/rafikk/imagick/imagick"
 )
 
 func main() {

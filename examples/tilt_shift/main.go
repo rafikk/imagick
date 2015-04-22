@@ -1,7 +1,7 @@
 // Port from http://members.shaw.ca/el.supremo/MagickWand/tilt_shift.htm to Go
 package main
 
-import "github.com/gographics/imagick/imagick"
+import "github.com/rafikk/imagick/imagick"
 
 func main() {
 	// Note that the colours are stored as separate *normalized* RGB components
